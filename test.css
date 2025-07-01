@@ -3,7 +3,7 @@
 /* B612 Mono Font (Typing Area) */
 @font-face {
   font-family: 'Press Start 2P';
-  src: url('./Press_Start_2P/PressStart2P-Regular.ttf') format('truetype');
+  src: url('./PressStart2P-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
