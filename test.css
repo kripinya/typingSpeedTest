@@ -1,0 +1,362 @@
+/* General UI Font */
+/* Global UI Font */
+/* B612 Mono Font (Typing Area) */
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('./Press_Start_2P/PressStart2P-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 1rem;
+  background-color: #d4cbe2;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+body {
+  cursor: url('./images/flower-cursor.png') 16 16, auto;
+}
+
+/* Override only typing area */
+#quote-display {
+  font-family: 'B612 Mono', monospace !important;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  border: 4px solid #b7a8e3;         /* Pastel purple border */
+  background-color: #dbceea;         /* Soft pastel background */
+  border-radius: 4px;
+  color: #333;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  min-height: 160px;
+  max-height: 220px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.08), 4px 4px 0px #cbbaf0;
+  scrollbar-width: thin;
+scrollbar-color: #b7a8e3 #75549d;
+
+}
+
+/* Container Styling */
+.container {
+  flex-grow: 1;                    /* Allow it to grow and fill available height */
+  width: 100%;
+  max-width: none;
+  padding: 2rem 4rem;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* Distribute items top-to-bottom */
+
+  box-sizing: border-box;
+  
+  
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+
+/* Typing Stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* Button Styling */
+button {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 0.65rem;
+  background-color: #b7a8e3;        /* Softer pastel purple */
+  color: #fff;
+  border: 4px solid #9684ce;
+  border-radius: 0;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #cbbaf0;  /* Pixel-like shadow */
+  transition: all 0.15s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #9081b6;
+  box-shadow: 2px 2px 0px #67579b;
+  transform: translateY(2px);
+}
+
+button:active {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transform: scale(0.97);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+button#reset-btn {
+  background-color: #b7a8e3; /* soft pink pastel */
+  border: 4px solid #9684ce;
+  box-shadow: 4px 4px 0px #cbbaf0;
+}
+
+button#reset-btn:hover {
+  background-color: #9081b6;
+  box-shadow: 2px 2px 0px #c38ee2;
+}
+
+/* Correct & Incorrect Characters */
+.correct {
+  color: grey;
+}
+
+.incorrect {
+  color: rgb(158, 59, 59);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Hide Modal by Default */
+.hidden {
+  display: none;
+}
+
+/* Theme Icon Toggle */
+#theme-icon-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1100;
+  transition: transform 0.3s ease;
+}
+
+#theme-icon-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* History List */
+#history {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+#history li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Hidden Input */
+#hidden-input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+  border: none;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #101016;
+  color: #dcd2f4;
+}
+
+body.dark-mode .container {
+  background-color: #111015;
+  color: #dcd2f4;
+}
+
+body.dark-mode #quote-display {
+  background-color: #221f2d;
+  color: #f3eaff;
+  border-color: #8c78c3;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.05), 4px 4px 0px #6d5ca7;
+}
+
+body.dark-mode button {
+  background-color: #8c78c3;
+  color: white;
+  border: 4px solid #b7a8e3;
+  box-shadow: 4px 4px 0px #292749;
+}
+
+body.dark-mode button:hover {
+  background-color: #1f1a30;
+  box-shadow: 2px 2px 0px #7862c1;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.6rem;
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.8rem 1rem;
+    font-size: 0.55rem;
+  }
+
+  #quote-display {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.logo {
+  width: 80px;
+  display: block;
+  margin: 0 auto 8px; /* Pixel-sized spacing */
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+body.dark-mode button#reset-btn {
+  background-color: #8c78c3;
+  color: white;
+  border: 4px solid #b7a8e3;
+  box-shadow: 4px 4px 0px #292749;
+}
+
+body.dark-mode button#reset-btn:hover {
+  background-color: #1f1a30;
+  box-shadow: 2px 2px 0px #7862c1;
+}
+
+.footer {
+  background-color: #9c8ab1;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #5c5176;
+  margin-top: 3rem;
+}
+
+.footer .footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer .owner {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer .social-links {
+  margin-top: 1rem;
+}
+
+.footer .social-links a {
+  margin: 0 0.5rem;
+  color: #6a59a0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer .social-links a:hover {
+  color: #4b3c79;
+  text-decoration: underline;
+}
+
+.footer .copyright {
+  margin-top: 1.2rem;
+  font-size: 0.75rem;
+  color: #8879b5;
+}
+
+/* Dark Mode Footer */
+body.dark-mode .footer {
+  background-color: #1c1a26;
+  color: #d0c5f1;
+  border-top-color: #7862c1;
+}
+
+body.dark-mode .footer .social-links a {
+  color: #a99de7;
+}
+
+body.dark-mode .footer .social-links a:hover {
+  color: #f1eaff;
+}
+
+body.dark-mode .footer .copyright {
+  color: #958bc6;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  color: #363232; /* Faint gray for subtlety */
+  font-family: 'B612 Mono', monospace;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+body.dark-mode .instructions {
+  color: #aaa; /* Slightly lighter in dark mode */
+}

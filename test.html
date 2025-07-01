@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="test.css" />
+</head>
+<body>
+  <div class="container">
+  <img src="images/logo.png" alt="Typing Speed Logo" class="logo" />
+  <h1>Typing Speed Test</h1>
+
+    <!-- Theme Toggle Icon -->
+    <div id="theme-icon-toggle" title="Toggle Theme">🌙</div>
+
+    <div class="instructions">
+  <p>⌨️ Type the paragraph exactly as shown.</p>
+  <p>⏱️ Timer starts with your first keystroke. You have 60 seconds.</p>
+  <p>🧠 Focus on accuracy first, then speed.</p>
+  <p>❌ Mistakes are highlighted in red.</p>
+  <p>📈 Stats appear once time runs out.</p>
+</div>
+
+    <!-- Quote Display (not editable) -->
+    <div id="quote-display" class="quote"></div>
+
+    <!-- Hidden input to capture typing -->
+    <input type="text" id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+
+    <!-- Stats -->
+    <div class="stats">
+      <p>Time: <span id="timer">0</span>s</p>
+      <p>WPM: <span id="wpm">0</span></p>
+      <p>Accuracy: <span id="accuracy">0%</span></p>
+    </div>
+
+    <!-- Summary Modal -->
+    <div id="summary-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Test Completed!</h2>
+        <p>WPM: <span id="modal-wpm"></span></p>
+        <p>Accuracy: <span id="modal-accuracy"></span></p>
+        <p>Mistakes: <span id="modal-mistakes"></span></p>
+        <button id="close-modal">Close</button>
+      </div>
+    </div>
+
+    <!-- History -->
+    <h3>Test History</h3>
+    <ul id="history"></ul>
+
+      <!--  button -->
+    <div>
+    <button id="restart-btn">Restart</button>
+    <button id="reset-btn">Reset</button>
+  </div>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="owner">Designed & Developed by Ananya Karn</div>
+    <div class="social-links">
+      <a href="https://github.com/kripinya/typingSpeedTest.git" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/kripinya" target="_blank">LinkedIn</a>
+      <a href="mailto:kripinya@gmail.com">Email</a>
+    </div>
+    <div class="copyright">© 2025 Typing Speed Test. All rights reserved.</div>
+  </div>
+</footer>
+  <script src="test.js"></script>
+</body>
+</html>
