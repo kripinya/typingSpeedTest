@@ -62,7 +62,7 @@ typingSpeedTest/
 Live Demo
 ---------
 👉 Live Website:
-https://kripinya.github.io/typingSpeedTest/
+(https://kripinya.github.io/typingSpeedTest/)
 
 📌 Deployment
 
