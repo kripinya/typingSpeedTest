@@ -1,5 +1,7 @@
 ⌨️ Typing Speed Test
+## 🖼️ User Interface Preview
 
+![Typing Speed Test UI](images/ui-preview.png)
 A minimal yet aesthetic Typing Speed Test web application built using HTML, CSS, and JavaScript.
 This project focuses on measuring typing speed, accuracy, and mistakes in real time, while maintaining a clean pastel–pixel UI and smooth user experience.
 
